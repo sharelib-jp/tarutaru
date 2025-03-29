@@ -1,0 +1,21 @@
+{
+  "name": "tarutaru",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "sass": "^1.86.0"
+  },
+  "scripts": {
+    "build": "sass src/main.scss dist/main.css --style compressed | postcss --use autoprefixer -b 'last 10 versions' dist/main.css -o dist/main.css",
+    "watch": "sass src/main.scss dist/main.css --watch | postcss --use autoprefixer -b 'last 10 versions' dist/main.css -o dist/main.css"
+  }
+}
